@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+#navbar{
+    background-color: #4831D4;
+    width: 100%;
+    height: 721px;
+}
+.topnav {
+    overflow: hidden;
+}
+.topnav-right {
+    float: right;
+    margin: 25px 25px 25px 5px;
+}
+.topnav-right a{
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.topnav-right a:hover{
+    color: rgb(236, 236, 236);
+}
+#heading{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 30px 50px 50px 50px;
+}
+#heading img{
+    width: 80%;
+    height: 400px;
+    margin: 80px auto 40px;
+    border-radius: 8px;
+}
+#heading a{
+    text-decoration: none;
+    color: white;
+    background-color: #52f73c;
+    padding: 9px 11px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px 10px ;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.4s;
+}
+#heading a:hover{
+    background-color: #44c733;
+}
+
+#adding_notes{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 30px 0px 40px 40px;
+    margin: 0px auto;
+}
+.note-title{
+    padding: 40px 10px 40px 100px;
+    margin: auto;
+}
+.event-title{
+    padding: 40px 100px 40px 10px;
+    margin: auto;
+}
+.meet-title{
+    padding: 40px 10px 40px 100px;
+    margin: auto;
+}
+.title h1{
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+.title p{
+    font-size: 21px;
+    color: rgb(167, 164, 164);
+    /* font-weight: bold; */
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+}
+.title a{
+    text-decoration: none;
+    color: white;
+    background-color: #4831D4;
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: none;
+    margin: 30px 10px 10px 0px;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.4s;
+}
+.title a:hover{
+    background-color: #483ba0;
+}
+
+
+
+
+
+#add_note{
+    background-color: #4831D4;
+    border-radius: 7px;
+    padding: 20px;
+    margin: auto;
+}
+
+#adding_events{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 80px 40px 40px 0px;
+    margin: 0px auto;
+}
+#add_event{
+    background-color: #4831D4;
+    border-radius: 7px;
+    padding: 20px;
+    margin: auto;
+}
+
+#adding_meets{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 80px 0px 40px 40px;
+    margin: 0px auto;
+}
+#add_meet{
+    background-color: #4831D4;
+    border-radius: 7px;
+    padding: 20px;
+    margin: auto;
+}
+
+#my_notes{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    /* padding: 5px; */
+}
+#my_notes h1{
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    margin: 7px;
+}
+
+#notes-card{
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #4831D4;
+    padding: 10px;
+}
+#events-card{
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #4831D4;
+    padding: 10px;
+}
+#meetings-card{
+    /* margin: 5px; */
+    border-radius: 5px;
+    background-color: #4831D4;
+    padding: 10px;
+}
+.empty{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 40px;
+    margin: 7px;
+}
+.search-box{
+    width: 50%;
+    height: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 7px 10px 7px;
+}
+
+#time_table{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#time_table img{
+    width: 100%;
+    height: 100%;
+}
+#time_table a{
+    text-decoration: none;
+    color: white;
+    background-color: #52f73c;
+    padding: 7px;
+    border-radius: 4px;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.4s;
+    text-align: center;
+}
+
+#time_table a:hover{
+    background-color: #43c733;
+}
+#class-links{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+}
+
+#footer{
+    padding: 30px 10px;
+    color: white;
+    background-color: black;
+}
+
+#credits{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+}
+
+.button{
+    background-color: #52f73c;
+    margin: 15px 0px 5px 0px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 11px;
+    transition: 0.4s;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.button:hover{
+    background-color: #44c733;
+}
+
+
+/* 
+Importing Media Queries
+*/
+
+@media screen and (max-width: 1100px){
+    #navbar{
+        background-color: #4831D4;
+        width: 100%;
+        height: 721px;
+    }
+    
+#heading{
+    display: grid;
+    grid-template-columns: 100%;
+}
+#adding_notes{
+    display: grid;
+    grid-template-columns: 100%;
+}
+#adding_events{
+    display: grid;
+    grid-template-columns: 100%;
+}
+#adding_meets{
+    display: grid;
+    grid-template-columns: 100%;
+}
+#my_notes{
+    display: grid;
+    grid-template-columns: 100%;
+}
+#time_table{
+    display: grid;
+    grid-template-columns: 100%;
+}
+#class-links{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+}
