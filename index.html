@@ -23,191 +23,126 @@
 </head>
 
 <body>
+
+    <!-- -------------------------------------------------------Hamburger Navbar----------------------------------------------------------------- -->
+    <div id="menu-bar">
+        <div id="menu" onclick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+        <ul class="nav" id="nav">
+            <h1>Kaizen - TODO</h1>
+            <li><a href="#">Home</a></li>
+            <li><a href="#adding_events">Add Note</a></li>
+            <li><a href="#notes-card">My Notes</a></li>
+            <li><a href="#time_table">Time Table</a></li>
+        </ul>
+    </div>
+    <div class="menu-bg" id="menu-bg"></div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- ---------------------------------------------------------------Main Navbar------------------------------------------------------------------- -->
     <section id="navbar">
         <div class="topnav">
             <img src="my_logo_rgb.png" alt="" height="80px" width="200px">
             <div class="topnav-right">
                 <a href="#">Home</a>
-                <a href="#my_notes">Notes</a>
+                <a href="#adding_events">Add Note</a>
+                <a href="#notes-card">My Notes</a>
                 <a href="#time_table">Time Table</a>
             </div>
         </div>
 
-        <div id="heading">
-            <div style="margin: auto; padding: 90px 70px 40px 90px;">
-                <h1
-                    style="font-size: 45px; line-height: 1.2; color: white; font-family: 'Baloo Bhai 2', cursive; margin: 5px;">
-                    <b style="color: #52f73c;">Kaizen </b>helps to make you more efficient and productive throught the
-                    day</h1>
-                <p
-                    style="color: whitesmoke; line-height: 1.5; font-size: 25px; font-family: 'Roboto', sans-serif; margin: 20px 10px 35px 10px;">
-                    Kaizen’s notes, events, and meets enables us to organize and prioritize our tasks in a fun,
-                    flexible, and rewarding way.</p>
-                <a href="#adding_notes">Get Started - It's Free!</a>
-            </div>
-            <div>
-                <img src="todo.jpg" alt="">
-            </div>
-        </div>
-
     </section>
 
-    <section id="adding_notes">
-        <div class="note-title title">
-            <h1>Notes</h1>
-            <p>Kaizen help's you to make an manage your notes effectively, it also provides an feature to mark the notes
-                 as important or urgent. So that you never miss an important task of your day. You can also add your day 
-                 to day tasks here.</p>
-
-            <a href="#notes-card">My Notes</a>
+    <!-- -------------------------------------------------------------------Heading---------------------------------------------------------- -->
+    <div id="headings">
+        <div id="heading_text">
+            <h1
+                style="font-size: 40px; line-height: 1.2; color: white; font-family: 'Baloo Bhai 2', cursive; margin: 5px;">
+                <b style="color: #52f73c;">Kaizen </b>helps to make you more efficient and productive throught the
+                day</h1>
+            <p
+                style="color: whitesmoke; line-height: 1.5; font-size: 22px; font-family: 'Roboto', sans-serif; margin: 10px;">
+                Kaizen’s notes, events, and meets enables us to organize and prioritize our tasks in a fun,
+                flexible, and rewarding way.</p>
+            <!-- <a href="#adding_notes">Get Started - It's Free!</a> -->
+            <button onclick="location.href='#adding_notes'" type="button">
+                Get Started - It's Free!</button>
         </div>
-        <div id="add_note">
-            <h2 style="color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 30px;">Add Your Notes Here</h2>
-
-            <input
-                style="padding: 5px; margin: 7px 0px; border-radius: 4px; border: 1px solid gray; font-family: 'Roboto', sans-serif; width: 50%;"
-                type="text" name="title" id="noteTitle" placeholder="Your Title"><br>
-
-
-            <textarea style="padding: 5px; margin: 7px 0px; border-radius: 4px; font-family: 'Roboto', sans-serif;"
-                name="text" id="noteText" cols="90" rows="11" placeholder="Your Text"></textarea><br>
-
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="imp">Important</label>
-            <input style="margin: 5px 2px;" type="checkbox" id="note-imp" name="imp">
-
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="text">Urgent</label>
-            <input style="margin: 5px 2px;" type="checkbox" id="note-urgent" name="urgent"><br>
-
-            <button class="button" id="addNote">Add Note</button><br>
+        <div id="image">
+            <img src="gif.gif" alt="">
         </div>
+    </div>
 
-    </section>
+
+    <!-- --------------------------------------------------------------------Adding events---------------------------------------------------- -->
 
     <section id="adding_events">
 
-        <div id="add_event">
-            <h2 style="color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 30px;">Add Your Events Here</h2>
-
-            <input
-                style="padding: 5px; margin: 7px 0px; border-radius: 4px; border: 1px solid gray; font-family: 'Roboto', sans-serif; width: 50%;"
-                type="text" name="title" id="eventTitle" placeholder="Your Title"><br>
-
-            <textarea style="padding: 5px; margin: 7px 0px; border-radius: 4px; font-family: 'Roboto', sans-serif;"
-                name="text" id="eventText" cols="90" rows="11" placeholder="Your Text"></textarea><br>
-
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="date_time">Schedule Of The Event:</label>
-            <input
-                style="margin: 5px 2px; color: grey; font-family: 'Baloo Bhai 2', cursive; font-size: 14px; border-radius: 4px; border: none;"
-                type="datetime-local" id="event_date_time" name="date_time"><br>
-
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="imp">Important</label>
-            <input style="margin: 5px 2px;" type="checkbox" id="event-imp" name="imp">
-
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="text">Urgent</label>
-            <input style="margin: 5px 2px;" type="checkbox" id="event-urgent" name="urgent"><br>
-
-            <button class="button" id="addEvent">Add Event</button><br>
-        </div>
-
-        <div class="event-title title">
+        <div class="title">
             <h1>Events</h1>
-            <p>Kaizen help's you to manage your events, you can add your assingments and quizzes with their due date, so that you will
-            never miss them.  </p>
-            <a href="#events-card">My Events</a>
-        </div>
-    </section>
-
-    <section id="adding_meets">
-
-        <div class="meet-title title">
-            <h1>Meetings</h1>
-            <p>Kaizen help's you to organize your meetings/gatherings, by listing them as important or urgent. It ensures that none of 
-                your important meetings will be missed inspite your hectic schedule.
-            </p>
-
-            <a href="#meetings-card">My Meetings</a>
+            <p>Kaizen help's you to manage your notes ,events and meetings. You can schedule your important assingments and quizzes with their due date, so
+                that you will never miss them. </p>
+            <a href="#notes-card">My Notes</a>
         </div>
 
-        <div id="add_meet">
-            <h2 style="color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 30px;">Add Your Meetings Here</h2>
+        <div id="add_event">
+            <h2 style="color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 30px;">Add Here</h2>
+
+            <label for="notes">Notes</label>
+            <input type="radio" id="note1" onclick="removeDueDate()" name="notes" checked>
+            <label for="events">Events</label>
+            <input type="radio" id="event1" onclick="displayDueDate()" name="notes">
+            <label for="meets">Meeting</label>
+            <input type="radio" id="meet1" onclick="displayDueDate()" name="notes"><br>
+
+
+            <label for="imp">Important</label>
+            <input style="margin: 5px 2px;" type="checkbox" id="note-imp" name="imp">
+
+            <label for="text">Urgent</label>
+            <input style="margin: 5px 2px;" type="checkbox" id="note-urgent" name="urgent"><br>
+
 
             <input
-                style="padding: 5px; margin: 7px 0px; border-radius: 4px; border: 1px solid gray; font-family: 'Roboto', sans-serif; width: 50%;"
-                type="text" name="title" id="meetTitle" placeholder="Your Title"><br>
+                style="padding: 5px; margin: 7px 0px; border-radius: 4px; border: 1px solid gray; font-family: 'Roboto', sans-serif; width: 60%;"
+                type="text" name="title" id="noteTitle" placeholder="Your Title"><br>
 
             <textarea style="padding: 5px; margin: 7px 0px; border-radius: 4px; font-family: 'Roboto', sans-serif;"
-                name="text" id="meetText" cols="90" rows="11" placeholder="Your Text"></textarea><br>
+                name="text" id="noteText" placeholder="Your Text"></textarea><br>
 
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="date_time">Schedule Of The Meeting:</label>
-            <input
-                style="margin: 5px 2px; font-family: 'Baloo Bhai 2', cursive; color: grey; font-size: 14px; border-radius: 4px; border: none;"
-                type="datetime-local" id="meet_date_time" name="date_time"><br>
+            <div id="due_date" style="visibility: hidden;">
+                <label for="date_time">Schedule Of The Event:</label>
+                <input
+                    style="margin: 5px 2px; color: grey; font-family: 'Baloo Bhai 2', cursive; font-size: 14px; border-radius: 4px; border: none;"
+                    type="datetime-local" id="date_time" name="date_time">
+            </div>
 
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="imp">Important</label>
-            <input style="margin: 5px 2px;" type="checkbox" id="meet-imp" name="imp">
-
-            <label style="margin: 5px 2px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 16px;"
-                for="text">Urgent</label>
-            <input style="margin: 5px 2px;" type="checkbox" id="meet-urgent" name="urgent"><br>
-
-            <button class="button" id="addMeet">Add Meeting</button><br>
-
+            <button class="button" id="addNote">Add Event</button>
         </div>
+
     </section>
 
+    <!-- --------------------------------------------------------------------Displaying all Events------------------------------------------------ -->
 
-
-    <section id="my_notes">
-        <div id="notes-card">
-            <h1>My Notes</h1>
-            <input type="text" class="search-box" id="notes_search" placeholder="Search By Titl/Text">
-            <div class="empty" id="emptyNotes" class="mt-3">
-                <h2>No work to do....</h2>
-                <h4 style="color: grey;">Click <a href="#add_note">here</a> to add Your Notes</h4>
-            </div>
-
-            <div id="notes">
-                <!-- HTML of notes written in index.js file -->
-            </div>
+    <div id="notes-card">
+        <h1 style="margin-left: 5px; color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 30px;">Introduction</h1>
+        <input type="text" class="search-box" id="notes_search" placeholder="Search By Title/Text">
+        <div class="empty" id="emptyNotes" class="mt-3">
+            <h2>No work to do....</h2>
+            <h4 style="color: grey;">Click <a href="#add_note">here</a> to add Your Notes</h4>
         </div>
 
-        <div id="events-card">
-            <h1>My Events</h1>
-            <input type="text" class="search-box" id="events_search" placeholder="Search By Title/Text">
-            <div class="empty" id="emptyEvents" class="mt-3">
-                <h2>No upcoming events....</h2>
-                <h4 style="color: grey;" >Click <a href="#add_event">here</a> to add Your Events</h4>
-            </div>
-
-            <div id="events">
-                <!-- HTML of events written in index.js file -->
-            </div>
+        <div id="notes">
+            <!-- HTML of notes written in index.js file -->
         </div>
-
-        <div id="meetings-card">
-            <h1>My Meetings</h1>
-            <input type="text" class="search-box" id="meets_search" placeholder="Search By Title/Text">
-            <div class="empty" id="emptyMeets" class="mt-3">
-                <h2>No upcoming meetings....</h2>
-                <h4 style="color: grey;">Click <a href="#add_meet">here</a> to add Your Meetings</h4>
-            </div>
-
-            <div id="meets">
-                <!-- HTML of meetings written in index.js file -->
-            </div>
-        </div>
-    </section>
+    </div>
 
 
 
-
+    <!-- -------------------------------------------------------------------------------Time Table----------------------------------------------- -->
 
     <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; margin: 15px;">Time Table Of
         Regular Classes</h1>
@@ -233,9 +168,9 @@
                 <a target="_blank" href="#">Polymers</a>
             </div>
         </div>
-  
-            
     </section>
+
+    <!-- -------------------------------------------------------------------Footer-------------------------------------------------------------- -->
     <footer id="footer">
         <h2>Credits - Aryan Garg & Arjun Porwal</h2>
         <p>&#169;Kaizen 2020 | All rights reserved.</p>
