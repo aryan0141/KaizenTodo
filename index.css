@@ -72,7 +72,7 @@ html {
 	z-index: 2;	
 }
 .change-bg{
-	width: 550px;
+	width: 650px;
 	height: 540px;
 	transform: translate(-60%,-30%);
 }
@@ -342,6 +342,9 @@ Importing Media Queries
     display: grid;
     grid-template-columns: 50% 50%;
 }
+.empty{
+    width: 50%;
+}
 
 }
 
@@ -372,6 +375,9 @@ Importing Media Queries
         }
         .search-box{
             width: 47%;
+        }
+        .empty{
+            width: 50%;
         }
 
 #adding_notes{
@@ -425,6 +431,9 @@ Importing Media Queries
     }
     #notes{
         grid-template-columns: 100%;
+    }
+    .empty{
+        width: 100%;
     }
     #time_table{
         grid-template-columns: 100%;
