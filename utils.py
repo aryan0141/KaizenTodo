@@ -1,41 +1,20 @@
-def find_max(arr):
-    max = arr[0]
-    for i in arr:
-        if i > max:
-            max = i
-    return max
+# set the matplotlib backend so figures can be saved in the background
+import matplotlib
+matplotlib.use("Agg")
 
+# import the necessary package
+import matplotlib.pyplot as plt
 
-class ComplexNumbers:
-    def __init__(self, xr, xi, yr, yi):
-        self.xreal = xr
-        self.yreal = yr
-        self.ximg = xi
-        self.yimg = yi
-
-    def showcalc(self, a, b):
-        if b < 0:
-            return f'{a} {b}i'
-        else:
-            return f'{a} + {b}i'
-
-    def add(self):
-        a = self.xreal + self.yreal
-        b = self.ximg + self.yimg
-        return self.showcalc(a, b)
-
-    def subtract(self):
-        a = self.xreal - self.yreal
-        b = self.ximg - self.yimg
-        return self.showcalc(a, b)
-
-    def multiply(self):
-        a = self.xreal*self.yreal - self.ximg*self.yimg
-        b = self.xreal*self.yimg + self.ximg*self.yreal
-        return self.showcalc(a, b)
-
-
-complex = ComplexNumbers(1, 5, -4, -3)
-print(complex.add())
-print(complex.subtract())
-print(complex.multiply())
+def save_plot(H, path):
+	# plot the training loss and accuracy
+	plt.style.use("ggplot")
+	plt.figure()
+	plt.plot(H.history["loss"], label="train_loss")
+	plt.plot(H.history["val_loss"], label="val_loss")
+	plt.plot(H.history["accuracy"], label="train_acc")
+	plt.plot(H.history["val_accuracy"], label="val_acc")
+	plt.title("Training Loss and Accuracy")
+	plt.xlabel("Epoch #")
+	plt.ylabel("Loss/Accuracy")
+	plt.legend()
+	plt.savefig(path)
